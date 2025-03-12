@@ -33,6 +33,9 @@ public class mainn {
         );
         COUR jee=new COUR(std);
         em.persist(jee);
+        em.remove(ad1);
+        em.remove(student1);
+        em.remove(jee);
         em.getTransaction().commit();
 
         em.close();

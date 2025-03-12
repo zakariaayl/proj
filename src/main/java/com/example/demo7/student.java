@@ -11,7 +11,7 @@ public class student{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private adresse a;
     @OneToMany(mappedBy = "std",cascade = CascadeType.ALL)
     private List<Module> moduleList=new ArrayList<>();
