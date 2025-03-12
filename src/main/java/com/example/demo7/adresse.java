@@ -12,8 +12,17 @@ public class adresse {
 
     }
 
+    @Override
+    public String toString() {
+        return "adresse{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", st=" + st +
+                '}';
+    }
+
     private String name;
-    @OneToOne(mappedBy = "a")
+    @OneToOne(mappedBy = "a",cascade = CascadeType.ALL)
     private student st;
 
     public adresse() {
